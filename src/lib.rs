@@ -31,7 +31,7 @@ pub static TREK_DESCRIPTIONS: phf::Map<&'static str, &'static str> = phf_map! {
     "Gabler" => "Chief Engineer Gabler, who occasionally relieved Scotty in Engineering during the Enterprise's animated adventures",
     "Thelin" => "Commander Thelin, Andorian officer who served as Science Officer in an alternate timeline where Spock died as a child",
     "Carter" => "Lieutenant Carter, Enterprise security officer who appeared in multiple animated missions",
-    
+
     // The Next Generation (TNG)
     "Picard" => "Captain Jean-Luc Picard, diplomatic and philosophical leader of the Enterprise-D, known for his intellectual approach to command and dedication to Federation principles",
     "Riker" => "Commander William T. Riker, Picard's trusted first officer, known for his leadership skills, tactical expertise, and trademark beard",
