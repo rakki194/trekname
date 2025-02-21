@@ -16,7 +16,7 @@ Add this to your `Cargo.toml`:
 
 ```toml
 [dependencies]
-trekname = "0.1.0"
+trekname = "0.1.1"
 ```
 
 ### Example
