@@ -1,9 +1,13 @@
 [package]
 name = "trekname"
-version = "0.1.0"
+version = "0.1.1"
 edition = "2024"
 description = "A library containing Star Trek character names and descriptions"
 license = "MIT"
+repository = "https://github.com/rakki194/trekname"
+documentation = "https://docs.rs/crate/trekname"
+keywords = ["star-trek", "characters", "database", "sci-fi", "television"]
+categories = ["database", "game-development", "value-formatting"]
 
 [dependencies]
 phf = { version = "0.11.3", features = ["macros"] }
