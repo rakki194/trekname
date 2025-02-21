@@ -16,7 +16,7 @@ Add this to your `Cargo.toml`:
 
 ```toml
 [dependencies]
-trekname = "0.1.1"
+trekname = "0.1.2"
 ```
 
 ### Example
@@ -40,6 +40,35 @@ fn main() {
     println!("Total characters: {}", names.len());
 }
 ```
+
+### Random Character Selection
+
+To get random characters, first add the `rand` crate to your `Cargo.toml`:
+
+```toml
+[dependencies]
+trekname = "0.1.1"
+rand = "0.8"
+```
+
+Then you can use this code to get a random character:
+
+```rust
+use trekname::{get_all_names, get_description};
+use rand::seq::SliceRandom;
+
+fn main() {
+    let names = get_all_names();
+    if let Some(random_name) = names.choose(&mut rand::thread_rng()) {
+        println!("Random Star Trek character: {}", random_name);
+        if let Some(description) = get_description(random_name) {
+            println!("Description: {}", description);
+        }
+    }
+}
+```
+
+This will randomly select a character from the database and display their name and description.
 
 ## API
 

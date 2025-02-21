@@ -1,3 +1,5 @@
+#![warn(clippy::all, clippy::pedantic)]
+
 //! Star Trek character names and descriptions library.
 //! This library provides a collection of Star Trek character names and their descriptions
 //! across various series and shows.
@@ -157,16 +159,19 @@ pub static TREK_DESCRIPTIONS: phf::Map<&'static str, &'static str> = phf_map! {
 };
 
 /// Returns a vector of all character names
+#[must_use]
 pub fn get_all_names() -> Vec<&'static str> {
     TREK_DESCRIPTIONS.keys().copied().collect()
 }
 
 /// Returns the description for a given character name, if it exists
+#[must_use]
 pub fn get_description(name: &str) -> Option<&'static str> {
     TREK_DESCRIPTIONS.get(name).copied()
 }
 
 /// Returns true if the character exists in the database
+#[must_use]
 pub fn character_exists(name: &str) -> bool {
     TREK_DESCRIPTIONS.contains_key(name)
 }
